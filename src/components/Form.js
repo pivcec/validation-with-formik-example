@@ -20,26 +20,36 @@ class Form extends Component {
           <button className="facebook-button">Facebook</button>
         </div>
         <div className="headline">
-          <h2 class="background">
+          <h1 className="background">
             <span>
               oder ohne facebook
             </span>
-          </h2>
+          </h1>
         </div>
         <div className="form-container">
+          <h2 className="input-title">vorname</h2>
           <div className="input-container">
+            <div className="input-icon"></div>
             <input />
           </div>
+          <h2 className="input-title">nachname</h2>
           <div className="input-container">
+            <div className="input-icon"></div>
             <input />
           </div>
+          <h2 className="input-title">mitgliedsname</h2>
           <div className="input-container">
+            <div className="input-icon"></div>
             <input />
           </div>
+          <h2 className="input-title">email</h2>
           <div className="input-container">
+            <div className="input-icon"></div>
             <input />
           </div>
+          <h2 className="input-title">password</h2>
           <div className="input-container">
+            <div className="input-icon"></div>
             <input />
           </div>
         </div>
@@ -47,8 +57,5 @@ class Form extends Component {
     );
   }
 }
-
-Form.propTypes = {
-};
 
 export default Form;

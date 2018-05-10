@@ -1,3 +1,11 @@
+@media only screen and (max-width: 650px) {
+  .button-container, .form-container, .headline {
+    width: 90%; } }
+
+@media only screen and (min-width: 650px) {
+  .button-container, .form-container, .headline {
+    width: 30%; } }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,7 +13,6 @@
   background-color: #f7f8f4; }
 
 .button-container {
-  width: 25%;
   padding: 1em 1em 0 1em;
   margin: 2em 2em 0 2em; }
 
@@ -16,19 +23,16 @@
   background-color: #315c99;
   color: #ffffff; }
 
-.headline {
-  width: 25%; }
-
-h2 {
-  font: .8em sans-serif;
+h1 {
+  font: .3em sans-serif;
   text-align: center;
   text-transform: uppercase; }
 
-h2.background {
+h1.background {
   position: relative;
   z-index: 1; }
 
-h2.background:before {
+h1.background:before {
   border-top: 1px solid #000000;
   content: "";
   margin: 0 auto;
@@ -40,22 +44,35 @@ h2.background:before {
   width: 100%;
   z-index: -1; }
 
-h2.background span {
+h1.background span {
   background-color: #f7f8f4;
   padding: 0 .5em; }
 
 .form-container {
-  width: 25%;
   background-color: #ffffff;
   padding: 1em;
   margin: 0 2em 2em 2em;
   border-radius: .7em; }
 
-.form-container input {
-  width: 100%;
+.input-container {
+  margin-bottom: 1em;
+  display: flex;
+  height: 2em; }
+
+h2 {
+  font: .8em sans-serif; }
+
+.input-container .input-icon {
   box-sizing: border-box;
   border: 1px solid #dddddd;
-  border-radius: .4em;
-  height: 3em;
-  margin-bottom: 1em;
-  padding: 1em; }
+  width: 35px;
+  height: 100%;
+  border-radius: 5px 0 0 5px; }
+
+.input-container input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  padding: 1em;
+  border-radius: 0 5px 5px 0; }
