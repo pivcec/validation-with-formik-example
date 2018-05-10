@@ -1,24 +1,61 @@
-.App {
-  text-align: center; }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f8f4; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+.button-container {
+  width: 25%;
+  padding: 1em 1em 0 1em;
+  margin: 2em 2em 0 2em; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
+.facebook-button {
+  width: 100%;
+  height: 3em;
+  border-radius: .4em;
+  background-color: #315c99;
+  color: #ffffff; }
 
-.App-title {
-  font-size: 1.5em; }
+.headline {
+  width: 25%; }
 
-.App-intro {
-  font-size: large; }
+h2 {
+  font: .8em sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+h2.background {
+  position: relative;
+  z-index: 1; }
+
+h2.background:before {
+  border-top: 1px solid #000000;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1; }
+
+h2.background span {
+  background-color: #f7f8f4;
+  padding: 0 .5em; }
+
+.form-container {
+  width: 25%;
+  background-color: #ffffff;
+  padding: 1em;
+  margin: 0 2em 2em 2em;
+  border-radius: .7em; }
+
+.form-container input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dddddd;
+  border-radius: .4em;
+  height: 3em;
+  margin-bottom: 1em;
+  padding: 1em; }
