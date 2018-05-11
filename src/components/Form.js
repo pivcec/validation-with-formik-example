@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Input from './Input';
+import InputWithCheckBox from './InputWithCheckBox';
+import { Person, Email, Lock } from '@material-ui/icons';
 
 class Form extends Component {
   constructor(props, context) {
@@ -13,11 +16,20 @@ class Form extends Component {
     };
   }
 
+  handleChange = (e, title) => {
+    const { value } = e.target;
+    this.setState({
+      [title]: value,
+    });
+  };
+
   render() {
     return (
       <div className="container">
-        <div className="button-container">
-          <button className="facebook-button">Facebook</button>
+        <div className="facebook-button-container">
+          <button className="facebook-button">
+            Facebook
+          </button>
         </div>
         <div className="headline">
           <h1 className="background">
@@ -27,31 +39,41 @@ class Form extends Component {
           </h1>
         </div>
         <div className="form-container">
-          <h2 className="input-title">vorname</h2>
-          <div className="input-container">
-            <div className="input-icon"></div>
-            <input />
+          <Input
+            title={'vorname'}
+            icon={<Person />}
+            handleChange={this.handleChange}
+          />
+          <Input
+            title={'nachname'}
+            icon={<Person />}
+            handleChange={this.handleChange}
+          />
+          <Input
+            title={'mitgliedsname'}
+            icon={<Person />}
+            handleChange={this.handleChange}
+          />
+          <Input
+            title={'email'}
+            icon={<Email />}
+            handleChange={this.handleChange}
+          />
+          <InputWithCheckBox
+            title={'passwort'}
+            icon={<Lock />}
+            handleChange={this.handleChange}
+          />
+          <div className="privacy-policy-container">
+            <div className="checkbox-container">
+              <input type="checkbox" />
+            </div>
+            <p>Ich Willige in die Verarbeitung und Nutzung meiner Daten gema der Dateschutzerklarung ein.</p>
           </div>
-          <h2 className="input-title">nachname</h2>
-          <div className="input-container">
-            <div className="input-icon"></div>
-            <input />
-          </div>
-          <h2 className="input-title">mitgliedsname</h2>
-          <div className="input-container">
-            <div className="input-icon"></div>
-            <input />
-          </div>
-          <h2 className="input-title">email</h2>
-          <div className="input-container">
-            <div className="input-icon"></div>
-            <input />
-          </div>
-          <h2 className="input-title">password</h2>
-          <div className="input-container">
-            <div className="input-icon"></div>
-            <input />
-          </div>
+          <button className="submit-button">Jetzt registrieren</button>
+        </div>
+        <div className="footer-container">
+          <p>Bereits Mitglied bei Dawanda? <a href="">Hier einloggen</a></p>
         </div>
       </div>
     );
