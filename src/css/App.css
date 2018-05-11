@@ -54,13 +54,12 @@ h1.background span {
   margin: 0 2em 2em 2em;
   border-radius: .7em; }
 
+p {
+  font: .6em sans-serif; }
+
 .input-container {
-  margin-bottom: 1em;
   display: flex;
   height: 2em; }
-
-h2, p {
-  font: .6em sans-serif; }
 
 .input-container .input-icon {
   box-sizing: border-box;
@@ -79,15 +78,35 @@ h2, p {
   padding: 1em;
   border-radius: 0 5px 5px 0; }
 
-input.password {
+.error-container {
+  height: 1em; }
+
+.error-bubble {
+  background-color: #fbe1a7;
+  display: inline-block;
+  padding: .2em;
+  position: relative;
+  margin-top: 6px; }
+
+.error-bubble:before {
+  content: "\A";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fbe1a7;
+  position: absolute;
+  top: -6px;
+  left: 7px; }
+
+input#password {
   border-radius: 0; }
 
 .input-with-checkbox {
   border: 1px solid #dddddd;
   border-radius: 0 5px 5px 0;
-  width: 100px;
+  padding: 0 1em;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 input[type='checkbox'] {
   width: 10px;
@@ -95,11 +114,16 @@ input[type='checkbox'] {
   padding: 0; }
 
 .privacy-policy-container {
-  display: flex;
-  align-items: flex-start;
-  margin: 1em; }
+  margin: 2em 0; }
 
-.privacy-policy-container p {
+.privacy-policy-container .error-bubble:before {
+  left: 2px; }
+
+.checkbox-and-terms-container {
+  display: flex;
+  align-items: flex-start; }
+
+.checkbox-and-terms-container p, .error-container p {
   margin: 0; }
 
 .checkbox-container {
