@@ -40,7 +40,7 @@ class InnerForm extends Component {
           showPassword={showPassword}
           hasCheckbox={false}
           id="firstName"
-          placeholder="Enter your first name"
+          placeholder=""
           type="text"
           value={values.firstName}
           onChange={handleChange}
@@ -56,7 +56,7 @@ class InnerForm extends Component {
           showPassword={showPassword}
           hasCheckbox={false}
           id="lastName"
-          placeholder="Enter your last name"
+          placeholder=""
           type="text"
           value={values.lastName}
           onChange={handleChange}
@@ -72,7 +72,7 @@ class InnerForm extends Component {
           showPassword={showPassword}
           hasCheckbox={false}
           id="userName"
-          placeholder="Enter your user name"
+          placeholder="Dein mitgliedsname ist öffentlich"
           type="text"
           value={values.userName}
           onChange={handleChange}
@@ -88,7 +88,7 @@ class InnerForm extends Component {
           showPassword={showPassword}
           hasCheckbox={false}
           id="email"
-          placeholder="Enter your email"
+          placeholder=""
           type="text"
           value={values.email}
           onChange={handleChange}
@@ -104,7 +104,7 @@ class InnerForm extends Component {
           showPassword={showPassword}
           hasCheckbox
           id="password"
-          placeholder="Enter your password"
+          placeholder=""
           type="password"
           value={values.password}
           onChange={handleChange}
