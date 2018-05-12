@@ -19,9 +19,6 @@ const App = () => (
       <Form />
     </div>
     <div className="footer-container">
-      <p>
-        Bereits Mitglied bei Dawanda? <a href="http://www.dawanda.com">Hier einloggen</a>
-      </p>
     </div>
   </div>
 );
