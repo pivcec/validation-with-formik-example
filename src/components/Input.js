@@ -31,7 +31,10 @@ class Input extends Component {
     } = this.props;
     return (
       <React.Fragment>
-        <label className="input-title">
+        <label
+          htmlFor={id}
+          className="input-title"
+        >
           <p>{title}</p>
         </label>
         <div className="input-container">
@@ -69,5 +72,34 @@ class Input extends Component {
     );
   }
 }
+
+Input.defaultProps = {
+  errors: {},
+  touched: {},
+};
+
+Input.propTypes = {
+  title: PropTypes.string.isRequired,
+  hasCheckbox: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  showPassword: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired,
+  errors: PropTypes.shape({
+    email: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    password: PropTypes.string,
+    userName: PropTypes.string,
+  }),
+  touched: PropTypes.shape({
+    privacyPolicy: PropTypes.bool,
+  }),
+};
 
 export default Input;

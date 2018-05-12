@@ -25,12 +25,10 @@ class InnerForm extends Component {
       values,
       touched,
       errors,
-      dirty,
       isSubmitting,
       handleChange,
       handleBlur,
       handleSubmit,
-      handleReset,
     } = this.props;
     const { showPassword } = this.state;
     return (
@@ -138,7 +136,14 @@ class InnerForm extends Component {
 }
 
 const EnhancedForm = withFormik({
-  mapPropsToValues: () => ({ firstName: '', lastName: '', userName: '', email: '', password: '', privacyPolicy: false }),
+  mapPropsToValues: () => ({
+    firstName: '',
+    lastName: '',
+    userName: '',
+    email: '',
+    password: '',
+    privacyPolicy: false,
+  }),
   validationSchema: Yup.object().shape({
     firstName: Yup.string()
       .required('First name is required!'),
@@ -168,5 +173,35 @@ const Form = () => (
     <EnhancedForm />
   </div>
 );
+
+InnerForm.defaultProps = {
+  errors: {},
+  touched: {},
+};
+
+InnerForm.propTypes = {
+  handleBlur: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  isSubmitting: PropTypes.bool.isRequired,
+  errors: PropTypes.shape({
+    email: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    password: PropTypes.string,
+    userName: PropTypes.string,
+  }),
+  touched: PropTypes.shape({
+    privacyPolicy: PropTypes.bool,
+  }),
+  values: PropTypes.shape({
+    email: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
+    privacyPolicy: PropTypes.bool.isRequired,
+    userName: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Form;

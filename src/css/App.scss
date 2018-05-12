@@ -1,12 +1,12 @@
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 300px) {
   .facebook-button-container, .headline, .form-container, .footer-container {
     width: 90%;
   }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 300px) {
   .facebook-button-container, .headline, .form-container, .footer-container {
-    width: 30%;
+    width: 300px;
   }
 }
 
