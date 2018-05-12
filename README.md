@@ -1,4 +1,4 @@
-## Dawanda Frontend Task
+## Validation With Formik Example
 
 Project has been bootstrapped with Create React App.
 
